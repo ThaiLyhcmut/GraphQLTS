@@ -11,17 +11,22 @@ export const typeDefsAccount = `#graphql
     msg: String
   }
 
-  # type Query {
-    
-  # }
+  type Query {
+    getAccount(token: String!): Account
+  }
 
   input RegisterAccountInput {
     fullName: String!
     email: String!
     password: String!
   }
+  input LoginAccountInput {
+    email: String!
+    password: String!
+  }
 
   type Mutation {
     registerAccount(account: RegisterAccountInput): Account
+    loginAccount(account: LoginAccountInput): Account
   }
 `;
