@@ -99,5 +99,15 @@ export const resolvers = {
       })
       return record
     }
+  },
+  
+  Article: {
+    category:async(record, _) => {
+      const categoryId = record.categoryId
+      const category = await Category.findOne({
+        _id: categoryId
+      })
+      return category
+    }
   }
 };

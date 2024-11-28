@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { connect } from "./config/database";
 import { resolvers } from "./resolcers"
-import { typeDefs } from "./typeDefs";
+import { typeDefs } from "./typeDefs/index.typeDef";
 import http from "http";
 import { ApolloServer } from "@apollo/server";
 import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHttpServer";

@@ -1,7 +1,7 @@
 //type Query => Truy van du lieu
 
 
-export const typeDefs = `#graphql
+export const typeDefsArticle = `#graphql
   type Article {
     id: String
     title: String
@@ -9,12 +9,6 @@ export const typeDefs = `#graphql
     description: String
     categoryId: String
     category: Category
-  }
-
-  type Category {
-    id: String
-    title: String
-    avatar: String
   }
 
   type ResponseCode {
@@ -25,9 +19,6 @@ export const typeDefs = `#graphql
   type Query {
     getListArticle: [Article]
     getArticle(id: String): Article
-
-    getListCategory: [Category]
-    getCategory(id: String): Category
   }
 
   input ArticleInput {
@@ -37,18 +28,9 @@ export const typeDefs = `#graphql
     categoryId: String
   }
 
-  input CategoryInput {
-    title: String
-    avatar: String
-  }
-
   type Mutation {
     createArticle(article: ArticleInput): Article
     deleteArticle(id: String): ResponseCode
     updateArticle(id: String, article: ArticleInput): Article
-
-    createCategory(category: CategoryInput): Category
-    deleteCategory(id: String): ResponseCode
-    updateCategory(id: String, category: CategoryInput): Category
   }
 `;
