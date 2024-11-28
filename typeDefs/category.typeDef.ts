@@ -10,7 +10,7 @@ export const typeDefsCategory = `#graphql
 
   type Query {
     getListCategory: [Category]
-    getCategory(id: String): Category
+    getCategory(id: String!): Category
   }
 
   input CategoryInput {
@@ -20,7 +20,7 @@ export const typeDefsCategory = `#graphql
 
   type Mutation {
     createCategory(category: CategoryInput): Category
-    deleteCategory(id: String): ResponseCode
-    updateCategory(id: String, category: CategoryInput): Category
+    deleteCategory(id: String!): ResponseCode
+    updateCategory(id: String!, category: CategoryInput): Category
   }
 `;
