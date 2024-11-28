@@ -2,7 +2,7 @@ import express, { Express } from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import { connect } from "./config/database";
-import { resolvers } from "./resolcers"
+import { resolvers } from "./resolvers/index.resolver"
 import { typeDefs } from "./typeDefs/index.typeDef";
 import http from "http";
 import { ApolloServer } from "@apollo/server";
