@@ -17,7 +17,7 @@ export const typeDefsArticle = `#graphql
   }
 
   type Query {
-    getListArticle: [Article]
+    getListArticle(sortKey: String, sortValue: String, currentPage: Int = 1, limitItems: Int = 4, filterKey: String, filterValue: String): [Article]
     getArticle(id: String): Article
   }
 
